@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(145, 145, 145);
+    position: relative;
+    padding: 0.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.4em ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav > i {
+    margin-left: 3em;
+    font-size: 1.6rem;
+    color: white;
+    animation: upToDown 1s ease;
+}
+
+ul {
+    position: absolute;
+    right: 320px;
+    cursor: pointer;
+    color: white;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 3em;
+    animation: upToDown 1s ease;
+}
+
+button {
+    padding: 0.6em 1.6em;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    margin-right: 50px;
+    animation: upToDown 1s ease;
+}
+
+.left-button {
+    height: 40px;
+    position: relative;
+    right: -85px;
+    background-color: #0096c7;
+    border: none;
+}
+
+.right-button {
+    padding-left: 40px;
+    background-color: transparent;
+    border: 2px solid #0096c7;
+}
+
+.content {
+    text-align: center;
+}
+
+h1 {
+    position: relative;
+    color: rgb(255, 255, 255);
+    top: 30px;
+    font-size: 15rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    cursor: pointer;
+    animation: fadeInLeft 1s ease;
+}
+
+h1:hover {
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+}
+
+h2 {
+    position: relative;
+    color: white;
+    bottom: 60px;
+    font-size: 6.5rem;
+    font-weight: 100;
+    animation: fadeInLeft 1s ease;
+}
+
+a {
+    position: relative;
+    bottom: 4rem;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    border: 2px solid white;
+    padding: 0.4em 2.4em;
+    border-radius: 50px;
+    transition: all 0.3s;
+    animation: fadeInLeft 1s ease;
+}
+
+.back {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -0;
+}
+
+@media (max-aspect-ratio: 16/0){
+    .back {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .back {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@keyframes fadeInLeft {
+    from{
+        transform: translate(-100%);
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes upToDown {
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
